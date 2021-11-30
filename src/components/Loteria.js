@@ -4,6 +4,7 @@ import Web3 from 'web3'
 import contrato_loteria from '../abis/loteria.json'
 import {Icon} from 'semantic-ui-react'
 import tokens from '../imagenes/loteria.png'
+import Header from './Header';
 
 class Loteria extends Component {
 
@@ -115,19 +116,20 @@ class Loteria extends Component {
     return (
         <div>
         <nav className="navbar navbar-dark fixed-top bg-dark flex-md-nowrap p-0 shadow">
-            <a
-            className="navbar-brand col-sm-3 col-md-2 mr-0"
-            href="https://frogames.es/rutas-de-aprendizaje"
-            target="_blank"
-            rel="noopener noreferrer"
+            <a id='menu-text'
+                style={{ height: '75px', marginTop: '30px' }}
+                className="navbar-brand col-sm-3 col-md-2 mr-0"
+                href="https://github.com/unaigl"
+                target="_blank"
+                rel="noopener noreferrer"
             >
-            DApp
+                Unai GitHub
             </a>
-
-            <ul className="navbar-nav px-3"> 
-            <li className="nav-item text-nowrap d-none d-sm-none d-sm-block">
-                <small className="text-white"><span id="account">Cuenta activa: {this.state.account}</span></small>
-            </li>
+            <Header />
+            <ul className="navbar-nav px-3">
+                <li className="nav-item text-nowrap d-none d-sm-none d-sm-block">
+                    <small className="text-white"><span id="menu-text">Cuenta activa {this.state.account}</span></small>
+                </li>
             </ul>
 
         </nav>
