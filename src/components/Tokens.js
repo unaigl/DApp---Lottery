@@ -5,6 +5,7 @@ import contrato_loteria from '../abis/loteria.json'
 import {Icon} from 'semantic-ui-react'
 import tokens from '../imagenes/tokens.png'
 import Header from './Header';
+import HeaderSocial from './HeaderSocial';
 
 class Tokens extends Component {
 
@@ -130,21 +131,14 @@ class Tokens extends Component {
          return (
             <div>
             <nav className="navbar navbar-dark fixed-top bg-dark flex-md-nowrap p-0 shadow">
-                <a id='menu-text'
-                    style={{ height: '75px', marginTop: '30px' }}
-                    className="navbar-brand col-sm-3 col-md-2 mr-0"
-                    href="https://github.com/unaigl"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                >
-                    Unai GitHub
-                </a>
+                
                 <Header />
-                <ul className="navbar-nav px-3">
+                <ul className="navbar-nav px-1">
                     <li className="nav-item text-nowrap d-none d-sm-none d-sm-block">
-                        <small className="text-white"><span id="menu-text">Cuenta activa {this.state.account}</span></small>
+                        <small className="text-white"><span id="menu-text">Wallet --  {this.state.account}</span></small>
                     </li>
                 </ul>
+                <HeaderSocial />
 
             </nav>
             <div className="container-fluid mt-5">
@@ -165,7 +159,7 @@ class Tokens extends Component {
                     <p> </p>
 
 
-                    <h3> <Icon circular inverted color='red' name='dollar' /> Compra tokens ERC-20</h3>
+                    <h3> <Icon circular inverted color='blue' name='dollar' /> Compra tokens ERC-20</h3>
 
                     <form onSubmit={(event) => {
                         event.preventDefault()
@@ -191,12 +185,12 @@ class Tokens extends Component {
                 
 
                     <input type="submit"
-                            className='bbtn btn-block btn-danger btn-sm'
+                            className='bbtn btn-block btn-primary btn-sm'
                             value='COMPRAR TOKENS'/>
                 </form>
 
 
-                <h3> <Icon circular inverted color='orange' name='bitcoin' /> Balance de tokens de un usuario</h3>
+                <h3> <Icon circular inverted color='blue' name='bitcoin' /> Balance de tokens de un usuario</h3>
 
                 <form onSubmit={(event) => {
                         event.preventDefault()
@@ -212,14 +206,14 @@ class Tokens extends Component {
                         ref={(input) => this.balance_direccion = input} /> 
 
                 <input type="submit"
-                        className='bbtn btn-block btn-warning btn-sm'
+                        className='bbtn btn-block btn-primary btn-sm'
                         value='BALANCE USUARIO'/>
 
 
                 </form>
 
 
-                <h3> <Icon circular inverted color='green' name='bitcoin' /> Balance de tokens del Smart Contract</h3>
+                <h3> <Icon circular inverted color='blue' name='bitcoin' /> Balance de tokens del Smart Contract</h3>
 
                 <form onSubmit={(event) => {
                         event.preventDefault()
@@ -230,7 +224,7 @@ class Tokens extends Component {
 
 
                 <input type="submit"
-                        className='bbtn btn-block btn-success btn-sm'
+                        className='bbtn btn-block btn-primary btn-sm'
                         value='BALANCE SMART CONTRACT'/>
 
 
